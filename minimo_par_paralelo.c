@@ -29,12 +29,12 @@ int min(void *str){
 	//initializing parameter of the struct
 	int start = parms -> start;
 	int end = parms -> end;
-	int *B = (int *)malloc(end * sizeof(int));
+	int *B = (int *)malloc(end + 1 * sizeof(int));
 	B = parms -> array;
 
 	int min = INT_MAX; 
 
-	for (int i = start; i < end; i++){ 
+	for (int i = start; i <= end; i++){ 
 	    if (B[i] < min){
 			min = B[i];
 	    }
