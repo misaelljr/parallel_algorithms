@@ -2,6 +2,7 @@
 Misael Jr 
 Phd Student
 ICMC - USP
+para executar: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
 */
 
 #include <stdio.h>
@@ -54,6 +55,7 @@ int *random_array(int array_size, int range){
 	return A;
 }
 
+//algorithm to scale the division of elements by number of threads
 int *split_search(int *array_target, int number_threads, int array_size){
 
 	//store the results; the array gonna have the same number of the number of threads
@@ -106,9 +108,11 @@ int *split_search(int *array_target, int number_threads, int array_size){
 	//set parametrs to the struct
 	parametrs->start = inicio;
 	parametrs->end   = fim;
-
+	
+	//print threads by elements
 	printf("Thread %d: %d, %d \n", number_threads, inicio, fim);
 	
+	//create thread
 	pthread_create(&ptr[cont], 0, (void *) min, (void *) parametrs);
 
 	//syncronize threads
@@ -123,16 +127,17 @@ int *split_search(int *array_target, int number_threads, int array_size){
 
 int main()
 {	
-	//tamanho do array definido a partir de N
+	//array size defined from N
 	int array_size = N;
-	//valor do range para geração randômica dos números
+	//range value for random number generation
 	int range = 10000;
-
+	
+	//number of threads defined 
 	int number_threads = T;
 
 	int *my_array = (int *) malloc (array_size * sizeof(int));
 
-	//meu array de números aleatórios
+	//array of random numbers
 	my_array = random_array(array_size, 10000);
 
 	//malloc memory to struct and for the array in the struct
