@@ -2,7 +2,7 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-para executar: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
+execute: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
 */
 
 #include <stdio.h>
@@ -11,8 +11,8 @@ para executar: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
 #include <time.h>
 #include <pthread.h>
 
-#define N 45000
-#define T 8
+#define N 450000000
+#define T 382
 
 //struct for passing parameters
 typedef struct{
