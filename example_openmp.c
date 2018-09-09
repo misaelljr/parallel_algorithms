@@ -1,3 +1,10 @@
+/* 
+Misael Jr 
+Phd Student
+ICMC - USP
+execute: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
+*/
+
 #include <stdio.h>
 #include <omp.h>
 //execute: clang example_openmp.c -o example_openmp -fopenmp
