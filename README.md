@@ -1,2 +1,3 @@
 # parallel_algorithms
-Concurrent Programming Discipline (ICMC-USP).
+Concurrent Programming (ICMC-USP).
+2018.2
