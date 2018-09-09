@@ -2,12 +2,11 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
+execute: clang sum_array_omp.c -fopenmp -o sum_array_omp
 */
 
 #include <stdio.h>
 #include <omp.h>
-//execute: clang sum_array_omp.c -fopenmp -o sum_array_omp
 
 /*
 Program that calculates the sum of the elements of two vectors (A and B) 
