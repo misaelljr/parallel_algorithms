@@ -1,6 +1,12 @@
+/* 
+Misael Jr 
+Phd Student
+ICMC - USP
+execute: clang sum_matrix_omp.c -fopenmp -o sum_matrix_omp
+*/
+
 #include <stdio.h>
 #include <omp.h>
-//execute: clang sum_matrix_omp.c -fopenmp -o sum_matrix_omp
 
 /*
 Program that calculates the sum of the elements of two matrices (A and B) 
