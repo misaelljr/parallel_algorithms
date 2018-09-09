@@ -1,6 +1,12 @@
+/* 
+Misael Jr 
+Phd Student
+ICMC - USP
+execute: clang sum_array_omp_for.c -fopenmp -o sum_array_omp_for
+*/
+
 #include <stdio.h>
 #include <omp.h>
-//execute: clang sum_array_omp_for.c -fopenmp -o sum_array_omp_for
 
 /*
 Program that calculates the sum of the elements of two vectors (A and B) 
