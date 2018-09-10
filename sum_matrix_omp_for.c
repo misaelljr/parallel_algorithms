@@ -2,7 +2,8 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute: clang sum_matrix_omp_for.c -fopenmp -o sum_matrix_omp_for
+execute on mac: clang sum_matrix_omp_for.c -fopenmp -o sum_matrix_omp_for
+execute on linux: gcc -fopenmp sum_matrix_omp_for.c -o sum_matrix_omp_for
 */
 
 #include <stdio.h>
