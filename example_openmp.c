@@ -2,7 +2,8 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute: clang example_openmp.c -o example_openmp -fopenmp
+execute on mac: clang example_openmp.c -o example_openmp -fopenmp
+execute on linux: gcc -fopenmp example_openmp.c -o example_openmp
 */
 
 #include <stdio.h>
