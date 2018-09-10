@@ -2,7 +2,8 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute: clang sum_array_omp.c -fopenmp -o sum_array_omp
+execute on mac: clang sum_array_omp.c -fopenmp -o sum_array_omp
+execute on linux: gcc -fopenmp sum_array_omp.c -o sum_array_omp
 */
 
 #include <stdio.h>
