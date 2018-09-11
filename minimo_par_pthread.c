@@ -2,7 +2,7 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
+execute linux/mac: gcc minimo_par_paralelo.c -o minimo_par_paralelo -lpthread
 */
 
 #include <stdio.h>
