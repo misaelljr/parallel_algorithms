@@ -50,8 +50,8 @@ void philosopher()
 	//demonstrating the lock and unlock in the two hashis by the philosophers
 	for (i = 0; i < NUM_MEALS; i++)
 	{
-		//occupying both hashis
-		omp_set_lock(&hashis[left_hashi]);
+	    //occupying both hashis
+	    omp_set_lock(&hashis[left_hashi]);
 	    omp_set_lock(&hashis[right_hashi]);
 
 	    //id print of the thread that occupied the hashis
