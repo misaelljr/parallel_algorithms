@@ -44,13 +44,14 @@ int main(int argc, char *argv[])
 	
 	printf("#############################################\n");
 
-	int my_min = INT_MAX;
+	int my_min;
 
 	//###parallel region start###
 	#pragma omp parallel reduction (min : my_min) num_threads(n_threads)
 	{	
 		int id = omp_get_thread_num();
 		int nt = omp_get_num_threads();
+		my_min = INT_MAX;
 
 		// partitioning between threads done automatically by openMP -- directive for
 		#pragma omp for 
