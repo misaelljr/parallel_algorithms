@@ -29,7 +29,6 @@ int prime_number(int n){
 	#pragma omp parallel for reduction(+ : total) private(i, j, prime) num_threads(NUM_THREADS)
 		for(i=2; i<=n; i++){
 			prime = 1;
-	//###parallel region end###
 
 			// For sequencial
 			for(j=2;j<i; j++)
@@ -40,6 +39,7 @@ int prime_number(int n){
 
 			total += prime;
 		}
+	//###parallel region end###
 
 	return total;
 }
