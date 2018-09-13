@@ -57,9 +57,8 @@ int main(int argc, char *argv[])
 		#pragma omp for 
 			for (int i = 0; i < array_size; i++)
 			{	
-				if (my_array[i] < my_min){
+				if (my_array[i] < my_min)
 					my_min = my_array[i];
-		    	}
 		    	//print minimum value per thread
 		    	printf("Thread %d found the minimum = %d\n", id, my_min);
 			}	
