@@ -2,7 +2,6 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-
 execute on mac: clang philosopher_problem_omp.c -fopenmp -o philosopher_problem_omp
 execute on linux: gcc -fopenmp philosopher_problem_omp.c -o philosopher_problem_omp
 */
