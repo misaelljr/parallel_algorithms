@@ -3,8 +3,6 @@ Misael Jr
 Phd Student
 ICMC - USP
 
-Philosophers' dinner problem proposed by Dijkstra (1965) as a classic problem of synchronization.
-
 execute on mac: clang philosopher_problem_omp.c -fopenmp -o philosopher_problem_omp
 execute on linux: gcc -fopenmp philosopher_problem_omp.c -o philosopher_problem_omp
 */
@@ -19,6 +17,11 @@ execute on linux: gcc -fopenmp philosopher_problem_omp.c -o philosopher_problem_
 #define NUM_MEALS 100 //number of iterations
 
 static omp_lock_t hashis[NUM_PHI]; 
+
+/*
+Philosophers' dinner problem proposed by Dijkstra (1965) as a classic problem of synchronization.
+Programa with openMP.
+*/
 
 //function that simulates the synchronization between philosophers
 void philosopher()
