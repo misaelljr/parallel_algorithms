@@ -14,6 +14,11 @@ execute linux/mac: gcc minimo_par_pthread.c -o minimo_par_pthread -lpthread
 #define N 450000000
 #define T 382
 
+/*
+Program that calculates the minimum value from a randomly generated array
+Programa with Pthreads.
+*/
+
 //struct for passing parameters
 typedef struct{
 	int *array;
