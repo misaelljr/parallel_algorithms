@@ -16,6 +16,11 @@ execute on linux: gcc -fopenmp minimo_par_omp.c -o minimo_par_omp
 #define N 450000000
 #define n_threads 8
 
+/*
+Program that calculates the minimum value from a randomly generated array
+Programa with openMP.
+*/
+
 // generate an array randomly
 int *random_array(int array_size, int range){
 
