@@ -2,7 +2,7 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute on linux: mpirun -np 1 ./hello_world_mpi
+execute on linux: mpirun -np 1 hello_world_mpi
 */
 
 #include <mpi.h>
