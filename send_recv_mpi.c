@@ -2,7 +2,7 @@
 Misael Jr 
 Phd Student
 ICMC - USP
-execute on linux and mac: mpirun -np 2 ./send_recv_mpi
+execute on linux and mac: mpirun -np 2 send_recv_mpi
 */
 
 #include <stdio.h>
