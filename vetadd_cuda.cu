@@ -6,7 +6,7 @@
 __global__
 void vectAdd(int *A, int *B, int *C)
 {
-	int i = blockDim.x * threadIdx.x + blockIdx.x;
+	int i = blockIdx.x*blockDim.x + threadIdx.x;
 
 	if(i < N)
 		C[i] = A[i] + B[i];
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 
 	cudaMalloc((void **)&d_C, size);
 
-	vectAdd<<<N, 1>>>(d_A, d_B, d_C);
+	vectAdd<<<(N+255)/256, 256>>>(d_A, d_B, d_C);
 
 	cudaMemcpy(C, d_C, N*sizeof(int), cudaMemcpyDeviceToHost);
 
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
         printf("%d\n", C[i]);
     }
 
-    cudaFree(d_A);
+    	cudaFree(d_A);
 	cudaFree(d_B);
 	cudaFree(d_C);
 }
