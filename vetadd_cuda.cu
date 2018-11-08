@@ -3,11 +3,12 @@
 
 #define N 10
 
-void vectAdd(int *A, int *B, int *C, int n)
+__global__
+void vectAdd(int *A, int *B, int *C)
 {
 	int i = blockDim.x * threadIdx.x + blockIdx.x;
 
-	if(i < n)
+	if(i < N)
 		C[i] = A[i] + B[i];
 }
 
@@ -36,9 +37,15 @@ int main(int argc, char const *argv[])
 
 	cudaMalloc((void **)&d_C, size);
 
-	vectAdd<<<1, 10>>>(d_A, d_B, d_C, N);
+	vectAdd<<<N, 1>>>(d_A, d_B, d_C);
 
-	cudaMemcpy(C, d_C, size, cudaMemcpyDeviceToHost);
+	cudaMemcpy(C, d_C, N*sizeof(int), cudaMemcpyDeviceToHost);
 
-	return 0;
+	for (int i = 0; i<N; i++) {
+        printf("%d\n", C[i]);
+    }
+
+    cudaFree(d_A);
+	cudaFree(d_B);
+	cudaFree(d_C);
 }
